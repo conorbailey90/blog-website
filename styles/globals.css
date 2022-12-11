@@ -1,13 +1,47 @@
+@font-face {
+  font-family: "Druk";
+  src: url(./Druk-Bold.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "NeueMontreal";
+  src: url(./NeueMontreal-Regular.woff2) format("woff2");
+}
+
+:root {
+  --main-text-color: #121212;
+  --main-background-color: #eeeeee;
+  --max-width: 1400px;
+}
+
+:root {
+  --main-text-color: #ffffff;
+  --main-background-color: #121212;
+}
+
+* {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-weight: 200;
+  line-height: 1.3;
+  color: var(--main-text-color);
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "NeueMontreal", -apple-system, BlinkMacSystemFont, Segoe UI,
+    Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+    sans-serif;
+  background: var(--main-background-color);
 }
 
 a {
-  color: inherit;
+  color: var(--main-text-color);
   text-decoration: none;
 }
 
@@ -15,12 +49,42 @@ a {
   box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+h1 {
+  font-size: 2.074rem;
+}
+
+h2 {
+  font-size: 1.728rem;
+}
+h3 {
+  font-size: 1.44rem;
+}
+h4 {
+  font-size: 1.2rem;
+}
+
+h5 {
+  font-size: 1rem;
+}
+
+p,
+ul {
+  margin-bottom: 1rem;
+  font-size: 0.833rem;
+}
+
+img {
+  width: 100%;
+}
+
+pre {
+  margin: 1rem 0;
+  background: #ecebeb;
+  padding: 1rem;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.147);
+}
+
+code {
+  color: #121212;
 }

@@ -1,0 +1,83 @@
+.blog {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.paddingContainer {
+  width: 95%;
+  max-width: var(--max-width);
+}
+.container {
+  position: relative;
+  width: 100%;
+  margin: 1rem 0;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1rem;
+}
+
+.blogHeader {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 1fr;
+  gap: 1rem;
+}
+
+.sectionTitle {
+  grid-area: 1 / 1 / 1 / 5;
+  height: 100%;
+  font-family: "Druk";
+  text-transform: uppercase;
+}
+
+.blogSearch {
+  grid-area: 1 / 9 / 1 / 13;
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.blogSearchInput {
+  width: calc(100% - 20px - 1rem);
+  background: transparent;
+  border: none;
+border-radius: 0;
+  border-right: 1px solid var(--main-background-color);
+  border-left: 1px solid var(--main-background-color);
+  border-top: 1px solid var(--main-background-color);
+  border-bottom: 1px solid var(--main-text-color);
+}
+
+.blogSearchInput:focus {
+  outline: none;
+}
+
+.searchIcon {
+  fill: var(--main-text-color);
+  width: 18px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    position: relative;
+    width: 100%;
+    margin: 1rem 0;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1rem;
+  }
+
+  .blogSearch {
+    grid-area: 1 / 3 / 1 / 13;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+  }
+}
