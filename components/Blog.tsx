@@ -71,6 +71,7 @@ const Blog = ({posts}: {posts: Post[]}) => {
                     <svg onClick={(e) => handleSearch(e)} ref={searchIconRef} className={styles.searchIcon} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg>
                 </div>
             </div>
+            {searchResults.length > 6 ?
             <div className={styles.pagination}>
                 <div style={{userSelect: 'none', cursor: 'pointer', fontFamily: 'Druk', textTransform: 'uppercase'}} onClick={(e) => handlePagination(e)} className={styles.previous}>
                    <h4>Previous</h4> 
@@ -79,7 +80,9 @@ const Blog = ({posts}: {posts: Post[]}) => {
                    <h4>Next</h4> 
                 </div>
             </div>
-            
+            :
+            null
+            }
             <div className={styles.container}>
                 {searchResults.length > 0 ?
                 searchResults.map((post, idx) => {
@@ -91,7 +94,7 @@ const Blog = ({posts}: {posts: Post[]}) => {
                 }
                 )
                 :
-                <h2>No Results Found</h2>}
+                <h4 style={{gridArea: '1 / 1 / 2 / 13'}}>No Results Found...</h4>}
             </div>
            
             </div>

@@ -16,7 +16,7 @@ const Tile = ({title, image, slug}: TileProps) => {
             <div className={styles.imageWrap}>
                 <Image src={image} alt="article image" fill style={{objectFit: 'cover', objectPosition: 'center'}} />
             </div>
-            <h5>{title}</h5>
+                <h5>{title}</h5>
             </Link>
         </div>
     
